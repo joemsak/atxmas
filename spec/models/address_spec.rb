@@ -2,8 +2,13 @@ require 'spec_no_rails_helper'
 require './app/models/address'
 
 describe Address do
+  it "defaults visibility to private" do
+    a = Address.create!
+    a.should be_private
+  end
+
   describe "scopes" do
-    let!(:private) { Address.create!(:visibility => 'private') }
+    let!(:private) { Address.create! }
 
     let!(:public) { Address.create!(:visibility => 'public') }
 
