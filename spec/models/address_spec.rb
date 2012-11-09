@@ -3,9 +3,9 @@ require './app/models/address'
 
 describe Address do
   describe "scopes" do
-    let!(:private) { Address.create!(:state => 'private') }
+    let!(:private) { Address.create!(:visibility => 'private') }
 
-    let!(:public) { Address.create!(:state => 'public') }
+    let!(:public) { Address.create!(:visibility => 'public') }
 
     describe "default" do
       it "includes public addresses" do

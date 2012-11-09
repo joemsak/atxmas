@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20121109190957) do
     t.string   "postal_code"
     t.integer  "country_id"
     t.integer  "user_id"
-    t.string   "state"
+    t.string   "visibility",  :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
